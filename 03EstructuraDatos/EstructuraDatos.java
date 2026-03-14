@@ -18,7 +18,7 @@ para poner a prueba sus conocimientos
 
 import java.util.Scanner;
 
-class EstructuraDatos{
+class EstructuraDatos {
     public static void main(String[] args) {
         // aqui van las variables
 
@@ -29,90 +29,177 @@ class EstructuraDatos{
 
         Scanner entrada = new Scanner(System.in);
 
-        //aqui va el menu
+        // aqui va el menu
 
-        do { 
-            
-        System.out.println("1.-");
-        System.out.println("2.-");
-        System.out.println("3.-");
-        System.out.println("4.-");
-        System.out.println("5.-");
-        System.out.println("6.-");
-        System.out.println("7.-");
-        System.out.println("8.-");
-        System.out.println("9.-");
-        System.out.println("10.-");
-        System.out.println("11.-");
-        System.out.println("12.-");
-        System.out.println("13.-");
-        System.out.println("14.- Salir");
+        do {
 
-        //entrada de datos
+            System.out.println("   |==============================|");
+            System.out.println("1.-||descuestos por edad perrones||");
+            System.out.println("2.-||numeros decimales a binarios||");
+            System.out.println("3.-");
+            System.out.println("4.-");
+            System.out.println("5.-");
+            System.out.println("6.-");
+            System.out.println("7.-");
+            System.out.println("8.-");
+            System.out.println("9.-");
+            System.out.println("10.-");
+            System.out.println("11.-");
+            System.out.println("12.-");
+            System.out.println("13.-");
+            System.out.println("14.- Salir");
 
-        opcion = entrada.nextInt();
+            // entrada de datos
 
-        //ahora tenemos que evaluar la entrada
-        
-        switch (opcion){
+            opcion = entrada.nextInt();
 
-            case 1:
-                break;
-            case 2:
-                //convertir un numero decimal a binario
-                System.out.println("ingrese un numero positivo enteroque se dese convertir en binario");
-                int numbinario;
-                String guardarbinario = "";
-                numbinario = entrada.nextInt();
+            // ahora tenemos que evaluar la entrada
 
-                if (numbinario > 0){
-                    //realizamos el modulo de 2
-                    while(numbinario > 0){
-                        if(numbinario%2 == 0){
-                            guardarbinario = "0" + guardarbinario;
-                        }else{
-                        //tas pendejo hijo
-                        guardarbinario = "1" + guardarbinario;
+            switch (opcion) {
+
+                case 1:
+                    // descuentos segun la edad
+                    System.out.println("");
+                    break;
+
+
+
+
+                case 2:
+                    // convertir un numero decimal a binario
+                    System.out.println("ingrese un numero positivo enteroque se dese convertir en binario");
+                    int numbinario;
+                    String guardarbinario = "";
+                    numbinario = entrada.nextInt();
+
+                    if (numbinario > 0) {
+                        // realizamos el modulo de 2
+                        while (numbinario > 0) {
+                            if (numbinario % 2 == 0) {
+                                guardarbinario = "0" + guardarbinario;
+                            } else {
+                                // tas pendejo hijo
+                                guardarbinario = "1" + guardarbinario;
+                            }
+                            numbinario = (int) numbinario / 2;
                         }
-                        numbinario = (int)numbinario/2;
+                    } else if (numbinario == 0) {
+                        guardarbinario = "0";
+                    } else {
+                        guardarbinario = "no se puede convertir ese numero, solo aceptapositivos";
                     }
-                }else if(numbinario == 0){
-                    guardarbinario = "0";
-                }else {
-                    guardarbinario = "no se puede convertir ese numero, solo aceptapositivos";
-                }
-                System.out.println("el numero convertido a binario es: " + guardarbinario);
-                break;
-            case 3:
-                break;
-            case 4:
-                break;
-            case 5:
-                break;
-            case 6:
-                break;
-            case 7:
-                break;
-            case 8:
-                break;
-            case 9:
-                break;
-            case 10:
-                break;
-            case 11:
-                break;
-            case 12:
-                break;
-            case 13:
-                break;
-            case 14:
-                break;
+                    System.out.println("el numero convertido a binario es: " + guardarbinario);
+                    break;
 
-            default:
-                break;
-        }
-        System.out.println("Deseas repetir el programa? escribe S o s para si");
-        letrapararepetir = entrada.next().charAt(0);
+
+
+
+
+                case 3:
+                    break;
+
+
+
+
+                case 4:
+                    break;
+
+
+
+
+                case 5:
+                    System.out.println("Bienvenido a esta hermosa tiendita linda y kawaii");
+                    System.out.println("Por favor ingrese cuantos elementos va a comprar:");
+                    int elementosproducto = 0;
+                    elementosproducto = entrada.nextInt();
+                    if (elementosproducto > 0) {
+                        float compra = 0;
+                        for (int i = 1; i <= elementosproducto; i++) {
+                            System.out.println("Ingrese el nombre del producto");
+                            String nombreproducto = "";
+                            nombreproducto = entrada.next();
+                            System.out.println("Ingrese el precio:");
+                            float precio = 0.0f;
+                            precio = entrada.nextFloat();
+                            float resultado;
+                            System.out.println("Ingrese la cantidad de producto:");
+                            int cantidad = 0;
+                            cantidad = entrada.nextInt();
+                            resultado = precio * cantidad;
+                            compra = resultado + compra;                        }
+                            System.out.println("El total de la compra es: " + compra);
+                        } 
+                    else {
+                        
+                        System.out.println("Ingrese solo cantidades positivas.");
+                    }
+                    break;
+
+
+
+
+                case 6:
+                    break;
+
+
+
+
+                case 7:
+                    break;
+
+
+
+
+                case 8:
+                    break;
+
+
+
+
+
+                case 9:
+                    break;
+
+
+
+
+                case 10:
+                    break;
+
+
+
+
+                case 11:
+                    break;
+
+
+
+
+                case 12:
+                    break;
+
+
+
+
+                case 13:
+                    break;
+
+
+
+
+
+
+                case 14:
+                    break;
+
+
+
+
+                default:
+                    break;
+            }
+            System.out.println("Deseas repetir el programa? escribe S o s para si");
+            letrapararepetir = entrada.next().charAt(0);
         } while (letrapararepetir == 's' || letrapararepetir == 'S');
     }
 }
