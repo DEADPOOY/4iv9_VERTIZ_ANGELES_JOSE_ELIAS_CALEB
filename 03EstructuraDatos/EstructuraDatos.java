@@ -33,10 +33,10 @@ class EstructuraDatos {
 
         do {
 
-            System.out.println("   |==============================|");
+            System.out.println("   ||============================||");
             System.out.println("1.-||descuestos por edad perrones||");
             System.out.println("2.-||numeros decimales a binarios||");
-            System.out.println("3.-");
+            System.out.println("3.-||conversion de temperaturas  ||");
             System.out.println("4.-");
             System.out.println("5.-");
             System.out.println("6.-");
@@ -97,7 +97,7 @@ class EstructuraDatos {
                     int numbinario;
                     String guardarbinario = "";
                     numbinario = entrada.nextInt();
-
+                    
                     if (numbinario > 0) {
                         // realizamos el modulo de 2
                         while (numbinario > 0) {
@@ -122,6 +122,52 @@ class EstructuraDatos {
 
 
                 case 3:
+                    System.out.println("conversor de temperaturas");
+                    System.out.println("las temperaturas son: C (celsius), F(Fahrenheit), K(Kelvin)");
+                    
+                    System.out.println("ingresa una temperatura: ");
+                    double valor = 0;
+                    valor = entrada.nextDouble();
+                    //pa ver que tipo de temperatura es
+                    System.out.println("que tipo es? (C/F/K)");
+                    String escala = entrada.next().trim().toUpperCase();
+                    // amos a leer a quitar espacios si pone y convetir su letra a mayusculas
+                    
+                    if (escala.length() != 1){
+                        System.out.println("te dije que solo C, F o K animal :|");
+                        return;
+                    }
+                    
+                    //lo siguiente dijo gepeto que lo usara pa que se me fuera el error
+                    char tipo =escala.charAt(0);
+                    double c = 0;
+                    double f = 0;
+                    double k = 0;
+
+                    if (tipo == 'C'){
+                        c = valor;
+                        f = c* 9.0 / 5.0 + 32;
+                        k = c + 273.15;
+                    }
+                    else if(tipo == 'F'){
+                        f = valor;
+                        c = (f - 32) * 5.0 / 9.0;
+                        k = c + 273.15;
+                    }
+                    else if (tipo == 'K'){
+                        k = valor;
+                        c = k -273.15;
+                        f = c * 9.0 / 5.0 + 32;
+                    }
+                    else{
+                        System.out.println("ese tipo no existe menso, usa C, F o K");
+                        return;
+                    }
+                    //mostramos resultados
+                    System.out.println("=== resultados ===");
+                    System.out.printf("  %.2f °C\n", c);
+                    System.out.printf("  %.2f °F\n", f);
+                    System.out.printf("  %.2f K\n",  k);
                     break;
 
 
