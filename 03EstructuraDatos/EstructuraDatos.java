@@ -33,21 +33,22 @@ class EstructuraDatos {
 
         do {
             System.out.println("ESCOGE LA OPCION QUE DESEAS USAR");
-            System.out.println("||==============================||");
-            System.out.println("||1-Descuestos por edad perrones||");
-            System.out.println("||2-Numeros decimales a binarios||");
-            System.out.println("||3-Conversion de temperaturas  ||");
-            System.out.println("||4-Contador de numeros         ||");
-            System.out.println("||5-Tiendita kawai              ||");
-            System.out.println("6.-");
-            System.out.println("7.-");
-            System.out.println("8.-");
-            System.out.println("9.-");
-            System.out.println("10.-");
-            System.out.println("11.-");
-            System.out.println("12.-");
-            System.out.println("13.-");
-            System.out.println("14.- Salir");
+            System.out.println("||=================================||");
+            System.out.println("||1-Descuestos por edad perrones   ||");
+            System.out.println("||2-Numeros decimales a binarios   ||");
+            System.out.println("||3-Conversion de temperaturas     ||");
+            System.out.println("||4-Contador de numeros            ||");
+            System.out.println("||5-Tiendita kawai                 ||");
+            System.out.println("||6-Calculadora de area y perimetro||");
+            System.out.println("||7-                               ||");
+            System.out.println("||8-                               ||");
+            System.out.println("||9-                               ||");
+            System.out.println("||10-                              ||");
+            System.out.println("||11-                              ||");
+            System.out.println("||12-                              ||");
+            System.out.println("||13-                              ||");
+            System.out.println("||14-Salir                         ||");
+            System.out.println("||=================================||");
 
             // entrada de datos
 
@@ -112,6 +113,7 @@ class EstructuraDatos {
                         guardarbinario = "0";
                     } else {
                         guardarbinario = "no se puede convertir ese numero, solo aceptapositivos";
+                        
                     }
                     System.out.println("el numero convertido a binario es: " + guardarbinario);
                     break;
@@ -134,7 +136,7 @@ class EstructuraDatos {
                     
                     if (escala.length() != 1){
                         System.out.println("te dije que solo C, F o K animal :|");
-                        return;
+                    escala = entrada.next().trim().toUpperCase();
                     }
                     
                     //lo siguiente dijo gepeto que lo usara pa que se me fuera el error
@@ -159,7 +161,7 @@ class EstructuraDatos {
                     }
                     else{
                         System.out.println("ese tipo no existe menso, usa C, F o K");
-                        return;
+                    escala = entrada.next().trim().toUpperCase();
                     }
                     //mostramos resultados
                     System.out.println("=== resultados ===");
@@ -229,7 +231,6 @@ class EstructuraDatos {
                             System.out.println("El total de la compra es: " + compra);
                         } 
                     else {
-                        
                         System.out.println("Ingrese solo cantidades positivas.");
                     }
                     break;
@@ -246,13 +247,13 @@ class EstructuraDatos {
                     System.out.println("||4-Circulo                     ||");
                     System.out.println("||5-Trapecio                    ||");
                     System.out.println("||==============================||");
+                    System.out.println("ingresa todos los datos que te pida");
                     System.out.println("ELIGE EL NUMERO (1-5): ");
-
+                    
                     int eleccion = 0;
                     eleccion = entrada.nextInt();
-
+                    //cuadrado
                     if (eleccion == 1){
-                        //cuadrado
                         System.out.println("Lado: ");
                         double lado = entrada.nextDouble();
                         double area = lado * lado;
@@ -261,9 +262,73 @@ class EstructuraDatos {
                         System.out.printf("Area:  %.2f\n", area);
                         System.out.printf("perimetro: %.2f\n", perimetro);
                     }
+                    //rectangulo
                     else if (eleccion == 2) {
-                        //rectangulo
+                        System.out.println("base: ");
+                        double base = entrada.nextDouble();
+                        System.out.println("altura: ");
+                        double altura = entrada.nextDouble();
+                        double area = base * altura;
+                        double perimetro = 2 * (base + altura);
+                        System.out.println("RECTANGULO");
+                        System.out.printf("Area:  %.2f\n", area);
+                        System.out.printf("perimetro:  %.2f\n", perimetro);
+                    }
+                    //triangulo
+                    else if (eleccion == 3) {
+                        System.out.println("base: ");
+                        double base = 0.0;
+                        base = entrada.nextDouble();
+                        System.out.println("Altura: ");
+                        double altura = 0.0;
+                        altura= entrada.nextDouble();
+                        System.out.println("lado del triangulo: ");
+                        double lado = 0.0;
+                        lado = entrada.nextDouble();
+                        double area =(base * altura) / 2;
+                        double perimetro = lado + lado + lado;
+                        System.out.println("TRIANGULO");
+                        System.out.printf("Area:  %.2f\n", area);
+                        System.out.printf("Perimetro:  %.2f\n", perimetro);
+                    }
+                    //circulo
+                    else if (eleccion == 4) {
+                        System.out.println("Radio: ");
+                        double radio = 0.0;
+                        radio = entrada.nextDouble();
+                        double area = Math.PI * radio * radio;
+                        double perimetro = 2 * Math.PI * radio;
+                        System.out.println("CIRCULO");
+                        System.out.printf("Area:  %.2f\n", area);
+                        System.out.printf("Circunferencia:  %.2f\n", perimetro);
+                    }
+                    //trapecio
+                    else if (opcion == 5) {
+                        System.out.println("Base mayor: ");
+                        double BaseMayor = 0.0;
+                        BaseMayor = entrada.nextDouble();
+                        System.out.println("Base menor: ");
+                        double BaseMenor = 0.0;
+                        BaseMenor = entrada.nextDouble();
+                        System.out.println("Altura");
+                        double altura = 0.0;
+                        altura = entrada.nextDouble();
+                        System.out.println("lateral 1: ");
+                        double lateral1 = 0.0;
+                        lateral1 = entrada.nextDouble();
+                        System.out.println("lateral 2");
+                        double lateral2 = 0.0;
+                        lateral2 = entrada.nextDouble();
+                        double area = ((BaseMayor + BaseMenor) / 2) * altura;
+                        double perimetro = BaseMayor + BaseMenor + lateral1 + lateral2;
                         
+                        System.out.println("RAPECIO");
+                        System.out.printf("Area:  %.2\n", area);
+                        System.out.printf("perimetro:  %.2\n", perimetro);
+                    }
+                    else{
+                        System.out.println("esa opcion que hijo te dije elige del 1 al 5 animal de granja");
+                        eleccion = entrada.nextInt();
                     }
                     break;
 
@@ -316,12 +381,26 @@ class EstructuraDatos {
 
 
                 case 14:
+                    System.out.print("Saliendo ");
+                    
+                    char[] palitos = {'|', '/', '-', '\\'};
+                    for (int i = 0; i < 33; i++) {  // ≈5 segundos (33 × 150ms)
+                        System.out.print("\b" + palitos[i % 4]);
+                        try {
+                            Thread.sleep(150);
+                        } catch (InterruptedException ignored) {}
+                    }
+                    
+                    System.out.println("\n¡Hasta luego!");
+                    entrada.close();
+                    System.exit(0);
                     break;
 
 
 
 
                 default:
+                    System.out.println("esa mmda que hijo no esta esa opcion pon otra :|");
                     break;
             }
             System.out.println("Deseas repetir el programa? escribe S o s para si");
