@@ -32,7 +32,7 @@ class EstructuraDatos {
         // aqui va el menu
 
         do {
-            System.out.println("ESCOGE LA OPCION QUE DESEAS USAR");
+            System.out.println("\n\n\n\nESCOGE LA OPCION QUE DESEAS USAR");
             System.out.println("||=================================||");
             System.out.println("||1-Descuestos por edad perrones   ||");
             System.out.println("||2-Numeros decimales a binarios   ||");
@@ -60,7 +60,7 @@ class EstructuraDatos {
 
                 case 1:
                     // descuentos segun la edad en el cine
-                    System.out.println("descuentos perrones");
+                    System.out.println("\n\n\ndescuentos perrones");
                     System.out.println("ingrese su edad");
                     int edad;
                     edad = entrada.nextInt();
@@ -78,7 +78,7 @@ class EstructuraDatos {
                     // si no esta ni tan viejo ni tan joven ps 0 xd
                     double precioFinal = costo -(costo * descuento);
                     
-                    System.out.println("el precio normal es de:  $" + costo);
+                    System.out.println("\n\nel precio normal es de:  $" + costo);
                     System.out.println("tu descuento perron es de:  " + (descuento * 100) + "%");
                     if (edad > 12){
                         if (edad < 60) {
@@ -93,7 +93,7 @@ class EstructuraDatos {
 
                 case 2:
                     // convertir un numero decimal a binario
-                    System.out.println("ingrese un numero positivo enteroque se dese convertir en binario");
+                    System.out.println("\n\n\ningrese un numero positivo enteroque se dese convertir en binario");
                     int numbinario;
                     String guardarbinario = "";
                     numbinario = entrada.nextInt();
@@ -112,10 +112,10 @@ class EstructuraDatos {
                     } else if (numbinario == 0) {
                         guardarbinario = "0";
                     } else {
-                        guardarbinario = "no se puede convertir ese numero, solo aceptapositivos";
+                        guardarbinario = "\n\nno se puede convertir ese numero, solo aceptapositivos";
                         
                     }
-                    System.out.println("el numero convertido a binario es: " + guardarbinario);
+                    System.out.println("\n\nel numero convertido a binario es: " + guardarbinario);
                     break;
 
 
@@ -123,7 +123,7 @@ class EstructuraDatos {
 
 
                 case 3:
-                    System.out.println("conversor de temperaturas");
+                    System.out.println("\n\n\nconversor de temperaturas");
                     System.out.println("las temperaturas son: C (celsius), F(Fahrenheit), K(Kelvin)");
                     
                     System.out.println("ingresa una temperatura: ");
@@ -164,7 +164,7 @@ class EstructuraDatos {
                     escala = entrada.next().trim().toUpperCase();
                     }
                     //mostramos resultados
-                    System.out.println("=== resultados ===");
+                    System.out.println("\n=== resultados ===");
                     System.out.printf("  %.2f °C\n", c);
                     System.out.printf("  %.2f °F\n", f);
                     System.out.printf("  %.2f K\n",  k);
@@ -174,7 +174,7 @@ class EstructuraDatos {
 
 
                 case 4:
-                    System.out.println("contador de numeros negativos y positivos");
+                    System.out.println("\n\n\ncontador de numeros negativos y positivos");
                     System.out.println("ingresa numero por numero");
                     System.out.println("cuando quieras terminar escibre 0");
                     //variables
@@ -209,7 +209,7 @@ class EstructuraDatos {
 
 
                 case 5:
-                    System.out.println("Bienvenido a esta hermosa tiendita linda y kawaii");
+                    System.out.println("\n\n\nBienvenido a esta hermosa tiendita linda y kawaii");
                     System.out.println("Por favor ingrese cuantos elementos va a comprar:");
                     int elementosproducto = 0;
                     elementosproducto = entrada.nextInt();
@@ -239,7 +239,7 @@ class EstructuraDatos {
 
 
                 case 6:
-                    System.out.println("||==============================||");
+                    System.out.println("\n\n\n||==============================||");
                     System.out.println("||calculadora areas y perimetros||");
                     System.out.println("||1-Cuadrado                    ||");
                     System.out.println("||2-Rectangulo                  ||");
@@ -322,12 +322,12 @@ class EstructuraDatos {
                         double area = ((BaseMayor + BaseMenor) / 2) * altura;
                         double perimetro = BaseMayor + BaseMenor + lateral1 + lateral2;
                         
-                        System.out.println("RAPECIO");
+                        System.out.println("TRAPECIO");
                         System.out.printf("Area:  %.2\n", area);
                         System.out.printf("perimetro:  %.2\n", perimetro);
                     }
                     else{
-                        System.out.println("esa opcion que hijo te dije elige del 1 al 5 animal de granja");
+                        System.out.println("\nesa opcion que hijo te dije elige del 1 al 5 animal de granja");
                         eleccion = entrada.nextInt();
                     }
                     break;
@@ -381,7 +381,7 @@ class EstructuraDatos {
 
 
                 case 14:
-                    System.out.print("Saliendo ");
+                    System.out.print("\n\nSaliendo ");
                     
                     char[] palitos = {'|', '/', '-', '\\'};
                     for (int i = 0; i < 33; i++) {  // ≈5 segundos (33 × 150ms)
@@ -400,10 +400,10 @@ class EstructuraDatos {
 
 
                 default:
-                    System.out.println("esa mmda que hijo no esta esa opcion pon otra :|");
+                    System.out.println("\n\nesa mmda que hijo no esta esa opcion pon otra :|");
                     break;
             }
-            System.out.println("Deseas repetir el programa? escribe S o s para si");
+            System.out.println("\n\nDeseas repetir el programa? escribe S o s para si");
             letrapararepetir = entrada.next().charAt(0);
         } while (letrapararepetir == 's' || letrapararepetir == 'S');
     }
