@@ -58,8 +58,34 @@ class EstructuraDatos {
             switch (opcion) {
 
                 case 1:
-                    // descuentos segun la edad
-                    System.out.println("");
+                    // descuentos segun la edad en el cine
+                    System.out.println("descuentos perrones");
+                    System.out.println("ingrese su edad");
+                    int edad;
+                    edad = entrada.nextInt();
+                    double costo = 250.0;
+                    double descuento = 0;
+
+                    if (edad <= 5) {
+                        descuento = 0.40;
+                    }
+                    else if(edad <= 12){
+                        descuento = 0.30;
+                    }
+                    else if(edad >= 60){
+                        descuento = 0.35;
+                    }
+                    // si no esta ni tan viejo ni tan joven ps 0 xd
+                    double precioFinal = costo -(costo * descuento);
+                    
+                    System.out.println("el precio normal es de:  $" + costo);
+                    System.out.println("tu descuento perron es de:  " + (descuento * 100) + "%");
+                    if (edad > 12){
+                        if (edad < 60) {
+                        System.out.println("pa ti no hay descuento perron ");
+                        }
+                    }
+                    System.out.println("el precio ya con el descuento es de:  $" + precioFinal);
                     break;
 
 
