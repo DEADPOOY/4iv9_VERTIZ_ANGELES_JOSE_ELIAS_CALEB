@@ -180,7 +180,6 @@ class EstructuraDatos {
                     int negativos = 0;
                     int ceros = 0;
                     int numero;
-
                     System.out.println("numero: ");
                     numero = entrada.nextInt();
                     //contadores
@@ -239,6 +238,33 @@ class EstructuraDatos {
 
 
                 case 6:
+                    System.out.println("||==============================||");
+                    System.out.println("||calculadora areas y perimetros||");
+                    System.out.println("||1-Cuadrado                    ||");
+                    System.out.println("||2-Rectangulo                  ||");
+                    System.out.println("||3-Triangulo                   ||");
+                    System.out.println("||4-Circulo                     ||");
+                    System.out.println("||5-Trapecio                    ||");
+                    System.out.println("||==============================||");
+                    System.out.println("ELIGE EL NUMERO (1-5): ");
+
+                    int eleccion = 0;
+                    eleccion = entrada.nextInt();
+
+                    if (eleccion == 1){
+                        //cuadrado
+                        System.out.println("Lado: ");
+                        double lado = entrada.nextDouble();
+                        double area = lado * lado;
+                        double perimetro = 4 * lado;
+                        System.out.println("CUADRADO");
+                        System.out.printf("Area:  %.2f\n", area);
+                        System.out.printf("perimetro: %.2f\n", perimetro);
+                    }
+                    else if (eleccion == 2) {
+                        //rectangulo
+                        
+                    }
                     break;
 
 
