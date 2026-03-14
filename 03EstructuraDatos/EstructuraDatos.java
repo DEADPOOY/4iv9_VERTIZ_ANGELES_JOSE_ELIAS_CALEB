@@ -32,13 +32,13 @@ class EstructuraDatos {
         // aqui va el menu
 
         do {
-
-            System.out.println("   ||============================||");
-            System.out.println("1.-||descuestos por edad perrones||");
-            System.out.println("2.-||numeros decimales a binarios||");
-            System.out.println("3.-||conversion de temperaturas  ||");
-            System.out.println("4.-");
-            System.out.println("5.-");
+            System.out.println("ESCOGE LA OPCION QUE DESEAS USAR");
+            System.out.println("||==============================||");
+            System.out.println("||1-Descuestos por edad perrones||");
+            System.out.println("||2-Numeros decimales a binarios||");
+            System.out.println("||3-Conversion de temperaturas  ||");
+            System.out.println("||4-Contador de numeros         ||");
+            System.out.println("||5-Tiendita kawai              ||");
             System.out.println("6.-");
             System.out.println("7.-");
             System.out.println("8.-");
@@ -65,7 +65,6 @@ class EstructuraDatos {
                     edad = entrada.nextInt();
                     double costo = 250.0;
                     double descuento = 0;
-
                     if (edad <= 5) {
                         descuento = 0.40;
                     }
@@ -143,7 +142,6 @@ class EstructuraDatos {
                     double c = 0;
                     double f = 0;
                     double k = 0;
-
                     if (tipo == 'C'){
                         c = valor;
                         f = c* 9.0 / 5.0 + 32;
@@ -174,6 +172,36 @@ class EstructuraDatos {
 
 
                 case 4:
+                    System.out.println("contador de numeros negativos y positivos");
+                    System.out.println("ingresa numero por numero");
+                    System.out.println("cuando quieras terminar escibre 0");
+                    //variables
+                    int positivos = 0;
+                    int negativos = 0;
+                    int ceros = 0;
+                    int numero;
+
+                    System.out.println("numero: ");
+                    numero = entrada.nextInt();
+                    //contadores
+                    while (numero != 0) {
+                        if (numero > 0) {
+                            positivos++;
+                        }
+                        else if (numero < 0) {
+                            negativos++;
+                        }
+                        else{
+                            ceros++;
+                        }
+                        System.out.println("numero: ");
+                        numero = entrada.nextInt();
+                    }
+                    //resultados
+                    System.out.println("resultados: ");
+                    System.out.println("positivos: " + positivos);
+                    System.out.println("negativos: " + negativos);
+                    System.out.println("ceros: "+ ceros);
                     break;
 
 
