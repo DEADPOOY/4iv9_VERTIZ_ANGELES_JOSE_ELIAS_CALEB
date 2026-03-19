@@ -2,7 +2,7 @@
 vamos a crear 14 programas dentro de un menu gigante
 para poner a prueba sus conocimientos 
 1.- desarrollar un programa para calcular el boni de un descuento por edad
-2.-  convertir numeros decimales a binarios
+2.- convertir numeros decimales a binarios
 3.- convertir temperaturas entre los 3 principales grados C -> F y K
 4.- Realizar un programa para contar numero de positivos y negativos de una serie de numeros 
 5.- desarrollar una tienda para agregar productos y precios
@@ -11,9 +11,8 @@ para poner a prueba sus conocimientos
 8.- desarrollar un programa para calcular el factorial con recursividad
 9.-vamos a hacer dibujitos 
 10.- desarrollar un figura hueca
-11.- desarrolar unos patrones
-12.- realizar un diamante
-13.- desarrollar una calcukladora basica + - * /
+11.- realizar un diamante
+12.- desarrollar una calcukladora basica + - * /
 */
 
 import java.util.Scanner;
@@ -43,9 +42,8 @@ class EstructuraDatos {
             System.out.println("||7-Tabla de multiplicar           ||");
             System.out.println("||8-Factorial con recursividad     ||");
             System.out.println("||9-Cuadrado magico                ||");
-            System.out.println("||10-Desarrollo de figura hueca*   ||");
+            System.out.println("||10-Desarrollo de figura hueca    ||");
             System.out.println("||11-                              ||");
-            System.out.println("||12-                              ||");
             System.out.println("||13-                              ||");
             System.out.println("||14-Salir                         ||");
             System.out.println("||=================================||");
@@ -425,19 +423,41 @@ class EstructuraDatos {
 
 
 
+
                 case 11:
+                    System.out.println("vamo a hacer un diamante");
+                    System.out.println("Ingresa el tamaño del diamante (la mitad)");
+                    int digito = entrada.nextInt();
+                    if (digito < 1){
+                        System.out.println("Eltamaño minimo debe ser de 1");
+                        break;
+                    }
+                    //pal pico del miamiante
+                    for (int i = 1; i <= digito; i++){
+                        for(int j = 1; j <= digito - i; j++){
+                            System.out.print("  ");
+                        }
+                        for(int j =1; j <= 2 * i - 1; j++ ){
+                            System.out.print("* ");
+                        }
+                        System.out.println();//pa que me salte esta xdxdxdxd
+                    }
+                    //pa la parte de abajo del miamiante
+                    for(int i = digito -1; i >= 1; i--){
+                        for (int j = 1; j <= digito - i; j++){
+                            System.out.print("  ");
+                        }
+                        for(int j = 1; j <= 2 * i - 1; j++){
+                            System.out.print("* ");
+                        }
+                        System.out.println();
+                    }
                     break;
 
 
 
 
                 case 12:
-                    break;
-
-
-
-
-                case 13:
                     break;
 
 
