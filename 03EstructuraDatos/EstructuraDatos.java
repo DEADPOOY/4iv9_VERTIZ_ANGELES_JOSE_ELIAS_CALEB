@@ -8,7 +8,7 @@ para poner a prueba sus conocimientos
 5.- desarrollar una tienda para agregar productos y precios
 6.- desarrollar un programa para calcular el area y perimetro de 5 diferentes figuras
 7.- desarrollar una tabla ahorita aver que se me ocurre 
-8.- desarrollar un programa para calcular el factorial 
+8.- desarrollar un programa para calcular el factorial con recursividad
 9.-vamos a hacer dibujitos 
 10.- desarrollar un figura hueca
 11.- desarrolar unos patrones
@@ -41,9 +41,9 @@ class EstructuraDatos {
             System.out.println("||5-Tiendita kawai                 ||");
             System.out.println("||6-Calculadora de area y perimetro||");
             System.out.println("||7-Tabla de multiplicar           ||");
-            System.out.println("||8-Calcular el factorial          ||");
-            System.out.println("||9-Vamos a hacer dibujitos*       ||");
-            System.out.println("||10-Desarrollo de figura hueca    ||");
+            System.out.println("||8-Factorial con recursividad     ||");
+            System.out.println("||9-Cuadrado magico                ||");
+            System.out.println("||10-Desarrollo de figura hueca*   ||");
             System.out.println("||11-                              ||");
             System.out.println("||12-                              ||");
             System.out.println("||13-                              ||");
@@ -346,12 +346,12 @@ class EstructuraDatos {
 
 
                 case 8:
-                    System.out.println( "=== calculadora de factoriales===");
-                    System.out.println("Ingresa un numero entero positivo");
+                    System.out.println( "=== factorial recursivo===");
+                    System.out.println("Ingresa un numero");
                     
                     int cantidad = entrada.nextInt();
                     if (cantidad < 0){
-                        System.out.println("el fatorial no esta definido con numeros negativos");
+                        System.out.println("no se puede calcular factorial negativo");
                         cantidad = entrada.nextInt();
                     }
                     if(cantidad == 0 || cantidad == 1){
@@ -359,10 +359,9 @@ class EstructuraDatos {
                         cantidad = entrada.nextInt();
                     }
                     //pa numeros cabrones usamos el long pa 20 asi bien cabron
-                    long factorial = 1;
+                    long factorial = new Object(){long fact(int n){return n==0 || n== 1 ? 1 : n*fact(n-1);}}.fact(cantidad);
                     System.out.println(cantidad + "! = ");
                     for(int i = 1; i <= cantidad; i++){
-                        factorial *= i;
                         //con esta madre vamos a mostrar el proceso y de que lado masca la iguana
                         if (i < cantidad){
                             System.out.print(i + " x ");
