@@ -41,9 +41,9 @@ class EstructuraDatos {
             System.out.println("||5-Tiendita kawai                 ||");
             System.out.println("||6-Calculadora de area y perimetro||");
             System.out.println("||7-                               ||");
-            System.out.println("||8-                               ||");
-            System.out.println("||9-                               ||");
-            System.out.println("||10-                              ||");
+            System.out.println("||8-Calcular el factorial*         ||");
+            System.out.println("||9-Vamos a hacer dibujitos        ||");
+            System.out.println("||10-Desarrollo de figura hueca    ||");
             System.out.println("||11-                              ||");
             System.out.println("||12-                              ||");
             System.out.println("||13-                              ||");
@@ -342,6 +342,35 @@ class EstructuraDatos {
 
 
                 case 8:
+                    System.out.println( "=== calculadora de factoriales===");
+                    System.out.println("Ingresa un numero entero positivo");
+                    
+                    int cantidad = entrada.nextInt();
+                    if (cantidad < 0){
+                        System.out.println("el fatorial no esta definido con numeros negativos");
+                        cantidad = entrada.nextInt();
+                    }
+                    if(cantidad == 0 || cantidad == 1){
+                        System.out.println(cantidad + "! = 1");
+                        cantidad = entrada.nextInt();
+                    }
+                    //pa numeros cabrones usamos el long pa 20 asi bien cabron
+                    long factorial = 1;
+                    System.out.println(cantidad + "! = ");
+                    for(int i = 1; i <= cantidad; i++){
+                        factorial *= i;
+                        //con esta madre vamos a mostrar el proceso y de que lado masca la iguana
+                        if (i < cantidad){
+                            System.out.println(i + " x ");
+                        }else{
+                            System.out.println(i + " = ");
+                        }
+                    }
+                    System.out.println(factorial);
+                    //ya si es muy grande
+                    if(cantidad > 20){
+                        System.out.println("\nNota: para numeros > 20 el resultado no alcanza perdon :)");
+                    }
                     break;
 
 
@@ -400,7 +429,7 @@ class EstructuraDatos {
 
 
                 default:
-                    System.out.println("\n\nesa mmda que hijo no esta esa opcion pon otra :|");
+                    System.out.println("\n\nesa mmda que hijo no esta esa opcion, pon otra :|");
                     break;
             }
             System.out.println("\n\nDeseas repetir el programa? escribe S o s para si");
