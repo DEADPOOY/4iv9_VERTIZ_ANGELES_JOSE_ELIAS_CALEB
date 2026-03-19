@@ -381,12 +381,45 @@ class EstructuraDatos {
 
 
                 case 9:
+                    System.out.println("Vamos a realizar un dibujo de un cuadrado magico");
+                    System.out.println("Ingrese el tamaño del cuadrado (Entre 1 y 20): ");
+                    int n1 = entrada.nextInt();
+                    if (n1 >= 1 && n1 <= 20) {
+                        // Se imprime
+                        for (int i = 1; i <= n1; i++) {
+                            // Se recorren las columnas
+                            for (int j = 1; j <= n1; j++) {
+                                System.out.print("* ");
+                            }
+                            System.out.println(" ");
+                        }
+                    } else {
+                        System.out.println("Porfavor ingrese un numero entre 1 y 20");
+                    }
                     break;
 
 
 
 
                 case 10:
+                    System.out.println("\n\nfigura hueca");
+                    System.out.println("Ingresa el tamaño del cuadrado");
+                    int cifra = entrada.nextInt();
+                    if (cifra < 2){
+                        System.out.println("el tamaño debe ser minimo de 2");
+                        break;
+                    }
+                    for(int i = 1; i <= cifra; i++){
+                        for(int j = 1; j <= cifra; j++){
+                            //solo imprime * en los bordes}
+                            if(i == 1 || i == cifra || j ==1 || j == cifra){
+                                System.out.print("* ");
+                            }else{
+                                System.out.print("  ");
+                            }
+                        }
+                        System.out.println();//pa que de un salto de linea la chingadera
+                    }
                     break;
 
 
