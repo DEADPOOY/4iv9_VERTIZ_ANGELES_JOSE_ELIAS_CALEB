@@ -40,9 +40,9 @@ class EstructuraDatos {
             System.out.println("||4-Contador de numeros            ||");
             System.out.println("||5-Tiendita kawai                 ||");
             System.out.println("||6-Calculadora de area y perimetro||");
-            System.out.println("||7-                               ||");
-            System.out.println("||8-Calcular el factorial*         ||");
-            System.out.println("||9-Vamos a hacer dibujitos        ||");
+            System.out.println("||7-Tabla de multiplicar           ||");
+            System.out.println("||8-Calcular el factorial          ||");
+            System.out.println("||9-Vamos a hacer dibujitos*       ||");
             System.out.println("||10-Desarrollo de figura hueca    ||");
             System.out.println("||11-                              ||");
             System.out.println("||12-                              ||");
@@ -336,7 +336,11 @@ class EstructuraDatos {
 
 
                 case 7:
-                    break;
+                    //Tabla de Multiplicar 
+                    for (int n = 0; n <= 10; n++) {
+                        System.out.println(" | " + n + " " + " | " + (n*10 + " "  + " | " + (n*100) + "" + " | " + (n*1000)));
+                    }   
+                break;
 
 
 
@@ -361,9 +365,9 @@ class EstructuraDatos {
                         factorial *= i;
                         //con esta madre vamos a mostrar el proceso y de que lado masca la iguana
                         if (i < cantidad){
-                            System.out.println(i + " x ");
+                            System.out.print(i + " x ");
                         }else{
-                            System.out.println(i + " = ");
+                            System.out.print(i + " = ");
                         }
                     }
                     System.out.println(factorial);
