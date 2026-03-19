@@ -43,9 +43,9 @@ class EstructuraDatos {
             System.out.println("||8-Factorial con recursividad     ||");
             System.out.println("||9-Cuadrado magico                ||");
             System.out.println("||10-Desarrollo de figura hueca    ||");
-            System.out.println("||11-                              ||");
-            System.out.println("||13-                              ||");
-            System.out.println("||14-Salir                         ||");
+            System.out.println("||11-Realizar un diamante          ||");
+            System.out.println("||12-Calculadora Basica            ||");
+            System.out.println("||13-Salir                         ||");
             System.out.println("||=================================||");
 
             // entrada de datos
@@ -458,6 +458,46 @@ class EstructuraDatos {
 
 
                 case 12:
+                    System.out.println("\n\n=== CALCULADORA BASICA PERRONA ===");
+                    System.out.println("Ingrese la operacion ( + - * / )");
+                    char operacion = entrada.next().charAt(0);
+                    double num = 0;
+                    double resultado = 0;
+                    boolean primerNumero = true;
+                    
+                    System.out.println("ingresa numero uno por uno (0 para acabar): ");
+                    System.out.println("numero: ");
+                    num = entrada.nextDouble();
+
+                    while(num != 0){
+                        if (primerNumero){
+                            resultado = num;
+                            primerNumero = false;
+                        }else{
+                            if (operacion == '+') {
+                                resultado = resultado + num;
+                            }else if (operacion == '-') {
+                                resultado = resultado - num;
+                            }else if (operacion == '*') {
+                                resultado = resultado * num;
+                            }
+                            else if (operacion == '/') {
+                            if (num != 0){
+                                resultado = resultado / num;
+                                }else{
+                                    System.out.println("no se puede dividir entre 0");
+                                    break;
+                                }
+                            }
+                            else{
+                            System.out.println("operacion no valida menso");
+                            break;
+                            }
+                        } 
+                        System.out.println("numero: ");
+                        num = entrada.nextDouble();
+                    }
+                    System.out.println("\nResultado final de todo: " + resultado);
                     break;
 
 
@@ -465,7 +505,7 @@ class EstructuraDatos {
 
 
 
-                case 14:
+                case 13:
                     System.out.print("\n\nSaliendo ");
                     
                     char[] palitos = {'|', '/', '-', '\\'};
