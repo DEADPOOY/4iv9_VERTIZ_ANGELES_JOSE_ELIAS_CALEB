@@ -15,9 +15,9 @@ Pedir:
 -Dirección
 
 2.Mostrar tipos de piso
--Porcelanato → $22.35 m²
--Marmoleado → $34.27 m²
--Acrílico → $22.94 m²
+-Porcelanato  $22.35 m²
+-Marmoleado  $34.27 m²
+-Acrílico  $22.94 m²
 
 3.Cálculo de compra
 -Pedir número de cuartos (entre 2 y 4)
@@ -29,7 +29,7 @@ Pedir:
 Extra:
 -Aplicar IVA 16%
 -Preguntar si compra:
--Si sí → aplicar descuento 7.95%
+-Si sí  aplicar descuento 7.95%
 */
 import java.util.Scanner;
 
@@ -90,11 +90,12 @@ public class EXAMEN {
                     break;
                 
                 case 2:
-                    System.out.println("\n||Opcion 2 Tipos de pisos disponibles");
+                    System.out.println("\n||=============================================||");
+                    System.out.println("||Opcion 2 Tipos de pisos disponibles          ||");
                     System.err.println("||=============================================||");
-                    System.out.println("||1-Porcelanato         22.35 el metro cuadrado||");
-                    System.out.println("||2-Acrilico:           22.94 l metro cuandrado||");
-                    System.out.println("||3-Marmoleado          34.27 eL metro cuadeado||");
+                    System.out.println("||1-Porcelanato---------22.35 el metro cuadrado||");
+                    System.out.println("||2-Acrilico------------22.94 l metro cuandrado||");
+                    System.out.println("||3-Marmoleado----------34.27 eL metro cuadeado||");
                     System.out.println("||=============================================||");
                     break;
                 
@@ -104,6 +105,7 @@ public class EXAMEN {
                     //vamos a ver si ya ecistian datos del comprador
                     if (nombre.isEmpty() || apellidoPaterno.isEmpty() || apellidoMaterno.isEmpty()) {
                         System.out.println("Esto no se puede hcaer: Primero ingrese los datos del comprador en la opcion 1");
+                        break;
                     }
                     //validar numero de cuartos (2, 3 o 4)
                     int numCuartos;
