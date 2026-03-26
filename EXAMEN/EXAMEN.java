@@ -69,21 +69,73 @@ public class EXAMEN {
 
             switch (opcion) {
                 case 1:
-                    System.out.println("\nOpcion 1: Ingresando datos del comparador");
-                    
-                    System.out.print("Nombre: ");
-                    nombre = datosos.nextLine().trim();
-                    
-                    System.out.println("Apellido Paterno: ");
-                    apellidoPaterno= datosos.nextLine().trim();
+                    System.out.println("\nOpcion 1: Ingresa datos del comprador");
 
-                    System.out.println("Apellido Materno: ");
-                    apellidoMaterno = datosos.nextLine().trim();
+                    // Nombre o nombres
+                    while (true) {
+                        System.out.print("Nombre: ");
+                        nombre = datosos.nextLine().trim();
+                        try {
+                            Double.parseDouble(nombre);
+                            System.out.println("Error: El nombre no debe contener numeros.");
+                        } catch (Exception e) {
+                            if (!nombre.isEmpty()) break;
+                            else System.out.println("Error: No puede estar vacío.");
+                        }
+                    }
 
-                    System.out.println("Fecha de nacimiento (DD/MM/AAAA): ");
-                    fechaNacimiento = datosos.nextLine().trim();
+                    // Apellido paterno
+                    while (true) {
+                        System.out.print("Apellido Paterno: ");
+                        apellidoPaterno = datosos.nextLine().trim();
+                        try {
+                            Double.parseDouble(apellidoPaterno);
+                            System.out.println("Error: No debe contener numeros.");
+                        } catch (Exception e) {
+                            if (!apellidoPaterno.isEmpty()) break;
+                            else System.out.println("Error: No puede estar vacío.");
+                        }
+                    }
 
-                    System.out.println("Direccion residencial: ");
+                    // Apellido materno
+                    while (true) {
+                        System.out.print("Apellido Materno: ");
+                        apellidoMaterno = datosos.nextLine().trim();
+                        try {
+                            Double.parseDouble(apellidoMaterno);
+                            System.out.println("Error: No debe contener numeros.");
+                        } catch (Exception e) {
+                            if (!apellidoMaterno.isEmpty()) break;
+                            else System.out.println("Error: No puede estar vacío.");
+                        }
+                    }
+
+                    // Fecha
+                    while (true) {
+                        System.out.print("Fecha de nacimiento (DD/MM/AAAA): ");
+                        fechaNacimiento = datosos.nextLine().trim();
+
+                        try {
+                            String[] partes = fechaNacimiento.split("/");
+
+                            if (partes.length != 3) throw new Exception();
+
+                            int dia = Integer.parseInt(partes[0]);
+                            int mes = Integer.parseInt(partes[1]);
+                            int anio = Integer.parseInt(partes[2]);
+
+                            if (dia < 1 || dia > 31 || mes < 1 || mes > 12 || anio < 1900) {
+                                throw new Exception();
+                            }
+
+                            break;
+
+                        } catch (Exception e) {
+                            System.out.println("Error: Formato invalido. Usa DD/MM/AAAA");
+                        }
+                    }
+
+                    System.out.print("Direccion residencial: ");
                     direccionResidencial = datosos.nextLine().trim();
 
                     System.out.println("DATOS GUARDADOS CORRECTAMENTE :)");
