@@ -38,7 +38,12 @@ public class CalculaFiguras{
                 CalcularRombo();
                 break;
             default:
-                System.out.println("opcion invalida intenta de nuevo");
+                if (opcionMenu != 0) {
+                    System.out.println("opcion invalida intenta de nuevo");    
+                }else{
+                    break;
+                }  
+                
                 break;
         }
         }while (opcionMenu != 0);
