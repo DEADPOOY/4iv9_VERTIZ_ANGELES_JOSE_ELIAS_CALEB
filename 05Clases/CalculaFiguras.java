@@ -15,7 +15,7 @@ public class CalculaFiguras{
         System.out.println("||3.-Triangulo                    ||");
         System.out.println("||4.-Trapecio                     ||");
         System.out.println("||5.-Rombo                        ||");
-        System.out.println("||6.-Salir                        ||");
+        System.out.println("||0.-Salir                        ||");
         System.out.println("||================================||");
         System.out.println("\n");
         opcionMenu = entrada.nextInt();
@@ -84,7 +84,7 @@ public class CalculaFiguras{
         double Area = ((BaMa + Bame)*h)/2;
         double Perimetro = BaMa + Bame + (2*lado);
         System.out.println("\nEl area del trapecio es: " + Area);
-        System.out.println("El area del trapecio es: " + Perimetro);
+        System.out.println("El perimetro del trapecio es: " + Perimetro);
     }
     public void CalcularRombo(){
         System.out.println("\ningresa la diagonal mayor");
