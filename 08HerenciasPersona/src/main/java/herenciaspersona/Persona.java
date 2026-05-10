@@ -5,7 +5,7 @@
 package herenciaspersona;
 
 /**
- *
+ *  
  * @author DEADPOOY2
  */
 public class Persona {
