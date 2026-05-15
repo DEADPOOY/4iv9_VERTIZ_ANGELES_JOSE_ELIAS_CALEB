@@ -75,9 +75,9 @@ public class guardarArchivos {
                     String valor = partes[1];
                     //guarda parte dcha
                     
-                    if (est = null) {
+                    if (est == null) {
                         //si no existe estudiante
-                        est = new Estudiante();
+                        est = new Estudiante(0, "");
                     }
                     switch (clave){
                         //revisa el dato que esta leyendo
@@ -89,6 +89,7 @@ public class guardarArchivos {
                             break;
                         case"edad":
                             est.setedad(Integer.parseInt(valor));
+                            break;
                         case "carrera":
                             est.setCarrera(valor);
                             break;
@@ -142,30 +143,33 @@ public class guardarArchivos {
                 if (partes.length == 2){
                     String clave = partes[0];
                     String valor = partes[1];
-                }
-                if (prof == null){
-                    prof = new Profesor();
-                }
-                switch(clave){
-                    case "id":
-                        prof.setId(Integer.parseInt(valor));
-                        break;
-                    case "nombre":
-                        prof.setNombre(valor);
-                        break;
-                    case "edad":
-                        prof.setEdad(Integer.parseInt(valor));
-                        break;
-                    case "materia":
-                        prof.setMateria(valor);
-                        break;
-                    case "salario":
-                        prof.setSalario(Double.parseDouble(valor));
-                        break;
+                
+                    if (prof == null){
+                        prof = new Profesor();
+                    }
+                    switch(clave){
+                        case "id":
+                            prof.setID(Integer.parseInt(valor));
+                            break;
+                        case "nombre":
+                            prof.setnombre(valor);
+                            break;
+                        case "edad":
+                            prof.setedad(Integer.parseInt(valor));
+                            break;
+                        case "materia":
+                            prof.setMateriaDada(valor);
+                            break;
+                        case "salario":
+                            prof.setSalario(Double.parseDouble(valor));
+                            break;
+                    }
                 }
             }
-        }catch (){
-            
+            if (prof != null) lista.add(prof);
+        }catch (Exception e){
+            System.out.println("No se pudo cargar el archivo profesores");
         }
+        return lista;
     }
 }
