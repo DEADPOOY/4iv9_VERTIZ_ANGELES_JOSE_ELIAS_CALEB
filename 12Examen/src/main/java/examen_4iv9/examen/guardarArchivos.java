@@ -27,6 +27,8 @@ public class guardarArchivos {
         try (BufferedWriter escribe = new BufferedWriter(new FileWriter(DATOS_ESTUDIANTES))){
             //recorre la lista de estudiantes
             for (Estudiante e : lista){
+                escribe.write("boleta=" + e.getBoleta());
+                escribe.newLine();
                 escribe.write("id=" + e.getID());
                 escribe.newLine();
                 escribe.write("nombre=" + e.getnombre());
@@ -81,6 +83,8 @@ public class guardarArchivos {
                     }
                     switch (clave){
                         //revisa el dato que esta leyendo
+                        case "boleta":
+                            est.setBoleta(Integer.parseInt(valor));
                         case "id":
                             est.setID(Integer.parseInt(valor));
                             break;
@@ -103,6 +107,7 @@ public class guardarArchivos {
         return lista;
     }
     //aqui va el de profesores
+    //no la voy a explicar porque es lo mismo solo que para profesor
     public static void guardarProfesores(ArrayList<Profesor> lista){
         try (BufferedWriter escribe = new BufferedWriter(new FileWriter(DATOS_PROFESORES))){
             for(Profesor p : lista){

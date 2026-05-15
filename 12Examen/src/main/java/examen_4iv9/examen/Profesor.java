@@ -41,4 +41,8 @@ public class Profesor extends Persona{
     public void setSalario(double salario) {
         this.salario = salario;
     }
+    @Override
+    public String toString() {
+        return super.toString() + "," + materiaDada + "," + salario;
+    }
 }

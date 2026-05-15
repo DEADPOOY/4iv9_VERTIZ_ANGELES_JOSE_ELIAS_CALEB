@@ -14,6 +14,8 @@ public class Estudiante extends Persona {
     private int boleta;
     private String carrera;
 
+    public Estudiante(){}
+    
     public Estudiante(int boleta, String carrera) {
         this.boleta = boleta;
         this.carrera = carrera;
@@ -39,5 +41,9 @@ public class Estudiante extends Persona {
 
     public void setCarrera(String carrera) {
         this.carrera = carrera;
+    }
+    @Override
+    public String toString() {
+        return super.toString() + "," + boleta + "," + carrera;
     }
 }

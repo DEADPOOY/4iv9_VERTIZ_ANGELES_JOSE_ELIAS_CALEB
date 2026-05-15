@@ -14,6 +14,7 @@ public class Persona {
     private int ID;
     private String nombre;
     private int edad;
+    private String genero;
     
     
     public Persona(){}
@@ -22,6 +23,7 @@ public class Persona {
         this.ID = ID;
         this.edad = edad;
         this.nombre = nombre;
+        this.genero = genero;
     }
     
     public int getID(){
@@ -43,6 +45,19 @@ public class Persona {
     }
     public void setedad(int edad){
     this.edad = edad;
+    }
+
+    public String getGenero() {
+        return genero;
+    }
+
+    public void setGenero(String genero) {
+        this.genero = genero;
+    }
+    
+    @Override
+    public String toString() {
+        return ID + "," + nombre + "," + edad;
     }
     //ya quedo para los valores lit todo lo hace
     //el ide no manches examen papa por el momento

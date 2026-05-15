@@ -1,0 +1,12 @@
+boleta=2025090784
+id=1
+nombre=Jose
+edad=17
+carrera=sistemas digitales
+
+boleta=12
+id=21
+nombre=wfvbn
+edad=12
+carrera=wsdf
+
